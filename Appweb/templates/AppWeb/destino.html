@@ -1,0 +1,25 @@
+{% extends "Appweb/inicio.html" %}
+
+{% load static %}
+
+{% block formularios %}
+   
+    <h2>Ingresa datos del Destino</h2>
+    <br>
+    {% if miFormulario.errors %}
+
+    <p style="color: rgb(255, 0, 0);"> revise los datos ingresados</p>
+
+    {% endif %}
+    <form action="" method="POST">{% csrf_token %}
+
+        
+        <table>
+            {{ miFormulario.as_table }}
+        </table>
+        <br>
+        <input type="submit", value="Enviar">
+
+    </form>
+
+{% endblock %}

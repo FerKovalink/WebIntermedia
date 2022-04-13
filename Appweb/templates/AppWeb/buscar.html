@@ -1,0 +1,28 @@
+{% extends "Appweb/inicio.html" %}
+
+{% load static %}
+
+{% block formulario %}
+
+    <h3>Buscador:</h3>
+
+    <form action="/Appweb/buscar/" method="GET">
+
+        <input type="text" name="nombre" id="nombre">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    {% if nombre %}
+
+        <p>Estamos buscando el: {{nombre}}</p>
+
+        <ul>
+	    {% for pasajero in pasajeros %}
+		<li> {{pasajero.nombre}} </li>
+	    {% endfor %}
+        </ul>
+        
+    {% endif %}
+{% endblock %}
