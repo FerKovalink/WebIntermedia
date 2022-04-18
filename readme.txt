@@ -1,9 +1,3 @@
-SuperUser:
-	1. user: ferk
-	   pass: fer123
-
-	2. user: florm
-	   pass: flor123
 
 Pagina principal: http://127.0.0.1:8000/Appweb/
 
